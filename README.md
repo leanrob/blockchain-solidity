@@ -48,7 +48,7 @@ This is to display the use of storage on the blockchain in testrpc.
 
 Expected output:
 
-```
+```javascript
 { tx: '0x36c7b8307dcc84f53e86347b4b2c48914aeb13ca6fdf17a4a9a75bc5ec87c4e0',
   receipt:
    { transactionHash: '0x36c7b8307dcc84f53e86347b4b2c48914aeb13ca6fdf17a4a9a75bc5ec87c4e0',
@@ -67,7 +67,9 @@ Expected output:
 
 Expected output:
 
-```{ [String: '42'] s: 1, e: 1, c: [ 42 ] }```
+```javascript
+{ [String: '42'] s: 1, e: 1, c: [ 42 ] }
+```
 
 ## Game
 
@@ -89,9 +91,24 @@ This is used to show how one contract (Game) can use another contract (ScoreStor
 
 expected output:
 
-```{ [String: '42'] s: 1, e: 1, c: [ 42 ] }```
+```javascript
+{ [String: '42'] s: 1, e: 1, c: [ 42 ] }
+```
 
 This is the same as the last part because we are calling the same command but from antoher (Games) contract.
+
+## Front End Technologies That Will Be Used
+
+-> Web3.js Ethereum API
+
+RPC calls will be made with this API
+Works with the MetaMask application
+
+-> Webpack
+
+See http://truffleframework.com/boxes/webpack for installation (unboxing) steps.
+
+
 
 
 
