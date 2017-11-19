@@ -34,7 +34,7 @@ This is to display the use of storage on the blockchain in testrpc.
 
 `cd store-score`
 
-truffle compile && truffle migrate`
+`truffle compile && truffle migrate`
 - Compile the code and migrate it to the virtual blockchain testRPC
 
 `truffle console`
@@ -69,7 +69,32 @@ Expected output:
 
 ```{ [String: '42'] s: 1, e: 1, c: [ 42 ] }```
 
-### Deploying to actual blockchain
+## Game
+
+This is used to show how one contract (Game) can use another contract (ScoreStore) to do work for it.
+
+`cd game`
+
+`truffle compile && truffle migrate`
+- Compile the code and migrate it to the virtual blockchain testRPC
+
+`truffle console`
+- To enter the truffle console, after this point it is javascript being typed directly into the console.
+
+> var mg
+
+> Game.deployed().then(function(deployed){mg=deployed;});
+
+> mg.ShowScore.call("Rob").then(function(returnValue){console.log(returnValue);});
+
+expected output:
+
+```{ [String: '42'] s: 1, e: 1, c: [ 42 ] }```
+
+This is the same as the last part because we are calling the same command but from antoher (Games) contract.
+
+
+
 
 
 
